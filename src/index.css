@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  background: #09090b;
+  color: #e4e4e7;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+.glass {
+  background: rgb(15 23 42 / 0.4);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.25), 0 24px 60px rgb(0 0 0 / 0.2);
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(60px, -40px) scale(1.15); }
+  66% { transform: translate(-40px, 50px) scale(0.9); }
+}
+.aurora {
+  position: fixed;
+  border-radius: 9999px;
+  filter: blur(110px);
+  opacity: 0.35;
+  animation: blob 22s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
